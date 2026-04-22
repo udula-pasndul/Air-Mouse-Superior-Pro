@@ -1,10 +1,47 @@
-This is a solid foundation for a GitHub repository. To make it "production-ready," I’ve polished the formatting, added a clear visual hierarchy, and structured the technical details so they are easy to skim.Here is your professional, high-performance README.md.🖐️ Air Mouse Superior ProProfessional Hand Gesture Mouse Control — Headless, High‑Performance, Production‑Ready.Turn any webcam into a precise, low‑latency air mouse. Control your cursor with natural movements and a suite of intuitive gestures for clicks, scrolling, zooming, and more. Designed to run silently in the background with zero lag.✨ Key FeaturesStable Tracking: Uses palm‑center tracking (not jittery fingertips) for rock-solid cursor stability.Pro-Grade Smoothing: Features 1€ / Kalman / Adaptive filters to eliminate jitter without adding latency.Velocity Mapping: Non‑linear mapping (linear, power, exponential) for an intuitive speed response.Headless Design: Runs in the system tray with no annoying camera preview windows.Adaptive Calibration: Automatically scales to your hand size on first run for consistent sensitivity.Deep Integration: Includes a REST API, hot-reloading JSON configs, and a Python plugin system.📦 Installation1. Clone & EnterBashgit clone https://github.com/yourusername/air-mouse-superior-pro.git
+# 🖐️ Air Mouse Superior Pro
+
+**Professional Hand Gesture Mouse Control — Headless, High‑Performance, Production‑Ready.**
+
+[![Python](https://img.shields.io/badge/Python-3.8%2B-blue?style=for-the-badge&logo=python&logoColor=white)](https://python.org)
+[![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
+[![Platform](https://img.shields.io/badge/Platform-Windows%20%7C%20macOS%20%7C%20Linux-lightgrey?style=for-the-badge)]()
+
+Turn any webcam into a precise, low‑latency air mouse. Control your cursor with natural movements and a suite of intuitive gestures for clicks, scrolling, and zooming. Designed to run silently in the background with zero-window "headless" operation.
+
+---
+
+## ✨ Why Superior Pro?
+
+* **Palm‑Center Tracking:** Uses the hand's center of mass for tracking rather than jittery fingertips, ensuring rock-solid cursor stability.
+* **Advanced Filtering:** Integrated **1€**, **Kalman**, and **Adaptive filters** eliminate micro-jitters without introducing processing lag.
+* **Non‑Linear Mapping:** Professional-grade velocity curves (Linear, Power, Exponential) for a natural, intuitive mouse feel.
+* **Zero-UI "Headless" Mode:** Runs entirely in the system tray. No distracting camera feed windows cluttering your workspace.
+* **Auto-Calibration:** Dynamically measures hand-to-camera distance to scale gesture sensitivity to your specific environment.
+* **Hot-Reloading:** Modify `air_mouse_pro_config.json` and see changes applied instantly without restarting the application.
+
+---
+
+## 🛠️ Technical Architecture
+
+| Component | Technology |
+| :--- | :--- |
+| **Vision Engine** | MediaPipe Hand Landmarker |
+| **Processing** | OpenCV & NumPy |
+| **Smoothing** | One-Euro Filter / Kalman Filter |
+| **I/O Control** | Win32API (Win), Quartz (macOS), Evdev (Linux) |
+| **Extensibility** | REST API & Python Plugin System |
+
+---
+
+## 📦 Installation
+
+### 1. Clone & Enter
+```bash
+git clone [https://github.com/yourusername/air-mouse-superior-pro.git](https://github.com/yourusername/air-mouse-superior-pro.git)
 cd air-mouse-superior-pro
-2. Install DependenciesBashpip install -r requirements.txt
-Core: mediapipe, opencv-python, numpy, pyautogui.Windows Users: pip install pywin32 is highly recommended for the lowest possible latency.3. Model SetupOn the first launch, the app will automatically download the MediaPipe Hand Landmarker model (~10 MB).🚀 Quick StartLaunch the application:Bashpython air_mouse_superior_pro_v5.py
-Command‑Line ArgumentsArgumentDescription--config PATHUse a custom config file (Default: air_mouse_pro_config.json)--calibrateForce calibration on startup--list-monitorsPrint connected display info and exit--apiEnable the REST API server--no-trayDisable the system tray icon🤌 Gesture ReferenceGestureHand ActionDefault ResultDouble FistClose hand into a fist twice quicklyLeft ClickPeace SignIndex + Middle up, others curledRight ClickTwo‑Finger ScrollSpread Index/Middle, move verticallyScroll WheelWrist RollTilt open hand left or rightContinuous ScrollPinchTouch Thumb and Index tipsToggle Drag LockOpen PalmAll fingers extended facing cameraFreeze CursorThree-Finger SwipeIndex/Middle/Ring up + horizontal swipeSwitch DesktopCircle GestureTrace a circle with Index fingerTake Screenshot⚙️ ConfigurationThe air_mouse_pro_config.json is generated on the first run. Thanks to Hot-Reloading, any changes saved to this file are applied instantly without restarting the app.Important Tuning Parametersmouse.filter_type: Switch between one_euro (fast) or kalman (very smooth).mouse.power_exponent: Increase (e.g., 1.4) for more "acceleration" during fast moves.gestures.learning_rate: How fast the app adapts to your specific hand posture.🔌 Developer ToolsREST APIEnable via config (api.enable = true). Runs at http://127.0.0.1:5765.GET /status: Current FPS, drag state, and hardware status.POST /calibrate: Trigger a fresh hand-size calibration.Plugin SystemExtend functionality by dropping scripts into the /plugins folder.Pythonclass MyPlugin(PluginBase):
-    def on_gesture(self, gesture: str, data: Dict[str, Any]):
-        if gesture == "peace_sign":
-            # Add custom logic here
-            pass
-🔧 TroubleshootingJittery Cursor: Increase dead_zone and smoothing_factor in the JSON config.High CPU: Reduce target_fps to 24 or 30 and lower frame_width.Detection Issues: Ensure your hand is well-lit and not blending into a background of the same color.
+
+2. Install Core Dependencies
+pip install -r requirements.txt
+
+3. Launch
+python air_mouse_superior_pro_v5.py
