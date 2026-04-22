@@ -20,6 +20,19 @@ Turn any webcam into a precise, low‑latency air mouse. Control your cursor wit
 * **Hot-Reloading:** Modify `air_mouse_pro_config.json` and see changes applied instantly without restarting the application.
 
 ---
+- **🤌 Rich Gesture Set**
+  | Gesture | Action |
+  |---|---|
+  | ✊✊ Double fist | Left click |
+  | ✌️ Peace sign | Right click |
+  | ☝️☝️ Two‑finger spread | Vertical scroll |
+  | 🤙 Wrist roll | Continuous scroll |
+  | 🤏 Thumb‑index pinch | Toggle drag lock |
+  | 👋 Open flat palm | Freeze cursor (precision anchor) |
+  | ☝️✌️✌️ Three‑finger swipe | Switch virtual desktop |
+  | ↔️ Thumb‑index spread | Zoom (Ctrl+wheel) |
+  | ⭕ Draw a circle in the air | Take a screenshot |
+- **🧠 Adaptive Learning** – Thresholds automatically adjust to your hand size and gesture style over time.
 
 ## 🛠️ Technical Architecture
 
