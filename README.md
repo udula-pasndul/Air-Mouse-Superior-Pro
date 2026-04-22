@@ -50,8 +50,9 @@ Turn any webcam into a precise, low‑latency air mouse. Control your cursor wit
 
 ### 1. Clone & Enter
 ```bash
-git clone [https://github.com/yourusername/air-mouse-superior-pro.git](https://github.com/yourusername/air-mouse-superior-pro.git)
-cd air-mouse-superior-pro
+git clone [https://github.com/udula-pasndul/Air-Mouse-Superior-Pro.git](https://github.com/udula-pasndul/Air-Mouse-Superior-Pro.git)
+cd Air-Mouse-Superior-Pro
+
 
 2. Install Core Dependencies
 pip install -r requirements.txt
