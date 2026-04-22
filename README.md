@@ -27,7 +27,7 @@ Turn any webcam into a precise, low‑latency air mouse. Control your cursor wit
 ## 📦 Installation
 
 ### 1. Clone the repository
-git clone https://github.com/yourusername/air-mouse-superior-pro.git
+git clone https://github.com/udula-pasndul/Air-Mouse-Superior-Pro.git
 cd air-mouse-superior-pro
 
 ### 2. Install dependencies
